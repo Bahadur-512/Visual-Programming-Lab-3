@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BSCS-IV-C Timetable</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    padding:40px 20px;
+    color:#fff;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:32px;
+    letter-spacing:2px;
+    background: linear-gradient(90deg,#ffffff,#cfd9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* GLASS CARD */
+.container{
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    overflow-x:auto;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:8px;
+    min-width:1200px;
+}
+
+th{
+    background:rgba(255,255,255,0.2);
+    padding:15px;
+    border-radius:12px;
+    font-size:14px;
+}
+
+td{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    font-size:13px;
+    transition:0.3s ease;
+}
+
+td:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,0.3);
+}
+
+/* DAY COLUMN */
+.day{
+    font-weight:bold;
+    background:rgba(0,0,0,0.4);
+    font-size:15px;
+}
+
+/* SUBJECT COLORS */
+.mvc{ background:rgba(255,182,193,0.3); }
+.se{ background:rgba(135,206,250,0.3); }
+.coal{ background:rgba(255,215,0,0.3); }
+.cn{ background:rgba(144,238,144,0.3); }
+.vp{ background:rgba(221,160,221,0.3); }
+.lab{ background:rgba(255,140,0,0.4); font-weight:bold; }
+.free{ background:rgba(255,255,255,0.05); }
+
+/* Teacher text */
+.teacher{
+    font-size:11px;
+    opacity:0.85;
+    margin-top:5px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    font-size:13px;
+    opacity:0.8;
+}
+
+@media(max-width:768px){
+    body{padding:20px 10px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>BSCS-IV-C (Shift-I) Timetable</h1>
+</div>
+
+<div class="container">
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>07:45-08:25</th>
+<th>08:25-09:05</th>
+<th>09:05-09:45</th>
+<th>09:45-10:25</th>
+<th>10:25-11:05</th>
+<th>11:05-11:45</th>
+<th>11:45-12:25</th>
+<th>12:25-01:05</th>
+<th>01:05-01:45</th>
+</tr>
+
+<!-- MONDAY -->
+<tr>
+<td class="day">Mon</td>
+<td class="free"></td>
+<td class="se">Civics<br><div class="teacher">Ms. Saman Noor</div></td>
+<td class="se">Software Engineering<br><div class="teacher">Dr. Maryum Nisar</div></td>
+<td class="coal">COAL<br><div class="teacher">Ms. Romana</div></td>
+<td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td>
+</tr>
+
+<!-- TUESDAY -->
+<tr>
+<td class="day">Tue</td>
+<td class="se">Civics<br><div class="teacher">Ms. Saman Noor</div></td>
+<td class="free"></td>
+<td class="cn">Computer Networks<br><div class="teacher">Ms. Sara Mishal</div></td>
+<td class="free"></td>
+<td class="vp">Visual Programming<br><div class="teacher">Mr. Hafiz Obaid</div></td>
+<td class="free"></td>
+<td colspan="3" class="lab">
+Visual Programming Lab<br>
+11:45 - 01:45<br>
+Mr. Hafiz Obaid
+</td>
+</tr>
+
+<!-- WEDNESDAY -->
+<tr>
+<td class="day">Wed</td>
+<td class="free"></td>
+<td class="mvc">Multivariable Calculus<br><div class="teacher">Ms. Sumaira</div></td>
+<td class="se">Software Engineering<br><div class="teacher">Dr. Maryum</div></td>
+<td class="vp">Visual Programming<br><div class="teacher">Mr. Hafiz</div></td>
+<td class="free"></td>
+<td class="free"></td>
+<td colspan="3" class="lab">
+Computer Networks Lab<br>
+11:45 - 01:45<br>
+Mr. Muhammad Bilal
+</td>
+</tr>
+
+<!-- THURSDAY -->
+<tr>
+<td class="day">Thu</td>
+<td class="free"></td>
+<td class="mvc">Multivariable Calculus<br><div class="teacher">Ms. Sumaira</div></td>
+<td class="se">Advisory Class<br><div class="teacher">Mr. Bilal</div></td>
+<td class="coal">COAL<br><div class="teacher">Ms. Romana</div></td>
+<td class="se">Software Engineering<br><div class="teacher">Dr. Maryum</div></td>
+<td class="free"></td>
+<td colspan="3" class="lab">
+COAL Lab<br>
+11:45 - 01:45<br>
+Ms. Romana
+</td>
+</tr>
+
+<!-- FRIDAY -->
+<tr>
+<td class="day">Fri</td>
+<td class="free"></td>
+<td class="free"></td>
+<td class="mvc">Multivariable Calculus<br><div class="teacher">Ms. Sumaira</div></td>
+<td class="free"></td>
+<td class="cn">Computer Networks<br><div class="teacher">Ms. Sara</div></td>
+<td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td>
+</tr>
+
+</table>
+</div>
+
+</body>
+</html>
